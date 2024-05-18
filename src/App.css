@@ -1,38 +1,125 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 90px;
+  padding:10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px; /* Increased gap for better spacing */
+  box-shadow: 0 0 12px #0000008a;
+  padding:20px;
+  border-radius: 8px;
+  background-color: #d5dcd5ad;
+}
+
+.form h1 {
+  grid-column: span 2;
+  text-align: start;
+  margin: 0;
+   /* Increased padding for better spacing */
+  color: #07302c;
+  font-size: 1.5rem;
+}
+
+.input-box {
+  margin-bottom:2px; /* Increased margin for better spacing */
+}
+
+.input-box label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  color: #07302c;
+}
+
+.input-box input,
+.input-box select,
+.input-box textarea {
+  width: 100%; /* Set to full width */
+  height:40px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0 12px;
+  font-size: 0.9rem;
+}
+
+.input-box textarea {
+  resize: vertical;
+}
+
+.input-box input:focus,
+.input-box select:focus,
+.input-box textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px #07302c;
+}
+
+.gender-option {
   display: flex;
-  flex-direction: column;
+  gap: 20px;
+}
+
+.gender-option .gender {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.gender-option .gender input[type="radio"] {
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.gender-option .gender label {
+  color: #07302c;
+  margin-top: 5px;
+  font-size: 1rem;
+}
+
+.gender-box {
+  margin-bottom: 10px; /* Ensure gender box has spacing */
+}
+
+.gender-box label {
+  color: #07302c;
+  font-weight: 600;
+}
+
+.btn {
+  grid-column: span 2; /* Make the button span across both columns */
+  display: flex;
+  justify-content: end;
+}
+
+button[type="submit"] {
+  background-color: #07302c;
   color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 30px; /* Increased padding for better appearance */
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button[type="submit"]:hover {
+  background-color: #074943;
 }

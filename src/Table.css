@@ -1,0 +1,194 @@
+h2 {
+  color: #07302c;
+  padding-top: 100px;
+  text-align: center;
+}
+
+.content-table {
+  border-collapse: collapse;
+  width: 90%; /* Adjust width as needed */
+  margin-top: 20px;
+  margin-left: auto; /* Center the table horizontally */
+  margin-right: auto;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+.content-table th,
+.content-table td {
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 8px;
+}
+
+.content-table th {
+  background-color: whitesmoke;
+  color: #07302c;
+}
+.active-row {
+  background-color: #fff;
+}
+.delete-icon {
+  color: #fff;
+  cursor: pointer;
+  font-size: large;
+  padding: 0 5px;
+  margin-right: 10px;
+  background-color: #cc0000;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.delete-icon:hover {
+  background-color: #ec2222;
+  color: #fff;
+
+}
+.edit-link {
+  color: #fff; /* Desired color for the link */
+  font-size: larger;
+  border: 1px solid #ccc;
+  padding: 0 5px;
+  background-color: #0c5e1e;
+  border-radius: 5px;
+}
+
+.edit-link:hover {
+  color: #fff;
+  background-color: #137528;
+  border-color: transparent;
+}
+.action-column {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 5px;
+ /* Add border */
+  border-radius: 5px; /* Add border radius */
+}
+
+/* Dialog styles */
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialog {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dialog h3 {
+  margin-bottom: 20px;
+}
+
+button.wx_remove, button.wx_edit {
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 0 10px;
+}
+
+button.wx_remove {
+  background-color: #006f5f;
+}
+
+button.wx_remove:hover {
+  background-color: #25a793;
+}
+
+button.wx_edit {
+  background-color: #cc0000;
+}
+
+button.wx_edit:hover {
+  background-color: rgb(231, 22, 22);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+  .content-table {
+    width: 95%;
+  }
+
+  .content-table th,
+  .content-table td {
+    padding: 6px;
+  }
+}
+
+@media (max-width: 992px) {
+  .content-table {
+    width: 100%;
+  }
+
+  .content-table th,
+  .content-table td {
+    padding: 5px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-table th,
+  .content-table td {
+    padding: 4px;
+    font-size: 0.8rem;
+  }
+
+  .delete-icon,
+  .edit-link {
+    font-size: medium;
+    padding: 0 3px;
+  }
+
+  button.wx_remove,
+  button.wx_edit {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  h2 {
+    padding-top: 50px;
+    font-size: 1.5rem;
+  }
+
+  .content-table th,
+  .content-table td {
+    padding: 3px;
+    font-size: 0.75rem;
+  }
+
+  .delete-icon,
+  .edit-link {
+    font-size: small;
+    padding: 0 2px;
+  }
+
+  button.wx_remove,
+  button.wx_edit {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    margin: 0 5px;
+  }
+
+  .dialog {
+    padding: 15px;
+  }
+}
+
