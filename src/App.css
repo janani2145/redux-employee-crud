@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: #fff;
+  /* background-color: #fff; */
   margin: 0;
   padding: 0;
 }
@@ -23,45 +23,48 @@ body {
 .form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px; /* Increased gap for better spacing */
-  box-shadow: 0 0 12px #0000008a;
+  column-gap: 30px;
+  row-gap: 10px;
+  box-shadow: 0 0 12px #0000009c;
   padding:20px;
   border-radius: 8px;
-  background-color: #d5dcd5ad;
+  /* background-color:#54758d2a; */
 }
 
 .form h1 {
   grid-column: span 2;
   text-align: start;
   margin: 0;
-   /* Increased padding for better spacing */
-  color: #07302c;
+   /* Increaseddding for better spacing */
+  color: #000;
   font-size: 1.5rem;
 }
 
 .input-box {
-  margin-bottom:2px; /* Increased margin for better spacing */
+  margin-bottom:2px;
+ /* Increased margin for better spacing */
 }
 
 .input-box label {
   display: block;
   font-size: 0.9rem;
   font-weight: 600;
-
-  color: #07302c;
+  color: #000000d0;
+  margin-bottom: 3px;
 }
 
 .input-box input,
 .input-box select,
 .input-box textarea {
   width: 100%; /* Set to full width */
-  height:40px;
-  border: 1px solid #ccc;
+  height: 35px;
+  border: 1px solid #ccc; /* Remove borders */
   border-radius: 6px;
   padding: 0 12px;
   font-size: 0.9rem;
+  box-shadow: inset 5px 5px 12px #fff;
+  /* background-color: #f8f8f880; */
 }
-
 .input-box textarea {
   resize: vertical;
 }
@@ -69,8 +72,9 @@ body {
 .input-box input:focus,
 .input-box select:focus,
 .input-box textarea:focus {
-  outline: none;
-  box-shadow: 0 0 5px #07302c;
+  outline: none !important;
+  box-shadow: 0 0 5px #2f77bb;
+  border: none;
 }
 
 .gender-option {
@@ -89,7 +93,7 @@ body {
 }
 
 .gender-option .gender label {
-  color: #07302c;
+  color: #000000d0;
   margin-top: 5px;
   font-size: 1rem;
 }
@@ -99,27 +103,54 @@ body {
 }
 
 .gender-box label {
-  color: #07302c;
+  color: #000000d0;
   font-weight: 600;
 }
 
-.btn {
+.btn-group {
   grid-column: span 2; /* Make the button span across both columns */
   display: flex;
   justify-content: end;
 }
 
 button[type="submit"] {
-  background-color: #07302c;
+  background-color: #5caae2;
   color: white;
   border: none;
   border-radius: 6px;
-  padding: 12px 30px; /* Increased padding for better appearance */
+  padding: 10px 20px; /* Increased padding for better appearance */
   cursor: pointer;
   font-size: 0.9rem;
   transition: background-color 0.3s;
 }
+button[type="button"] {
+  background-color:rgb(207, 21, 21);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px; /* Increased padding for better appearance */
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+  margin-right: 3px;
+}
 
 button[type="submit"]:hover {
-  background-color: #074943;
+  background-color: #1f83c5;
+}
+
+button[type="button"]:hover {
+  background-color:rgb(219, 36, 36);
+}
+.error-message {
+  color: rgba(243, 10, 10, 0.842);
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+/* Add this CSS to your existing styles */
+.star-icon {
+  color: rgba(230, 11, 11, 0.863);
+  margin-left: 5px;
+  font-size:x-small;
+  margin-bottom: 1px;
 }

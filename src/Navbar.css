@@ -1,12 +1,14 @@
 /* Navbar.css */
 .navbar {
   width: 100%;
-  padding: 15px 20px;
+  padding: 13px 20px;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
-  background-color: #d5dcd580;
+  background-color: #c2dcee; 
+    /* background-color: #7e9fb96e; */
+/* background-color: black; */
+  /* background-color:#54758d2a; */
 }
 
 .navbar-container {
@@ -20,11 +22,11 @@
 .navbar-brand {
   display: flex;
   align-items: center;
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 .navbar-brand a {
-  color: #07302c;
+  color: #000;
   text-decoration: none;
   font-size: 1.5rem;
   display: flex;
@@ -32,7 +34,7 @@
 }
 
 .navbar-brand a:hover {
-  color: #0c6632;
+  color: #000000e5;
 }
 
 .navbar-logo {
@@ -48,7 +50,7 @@
 }
 
 .navbar-links a {
-  color: #07302c;
+  color: #000;
   text-decoration: none;
   margin-left: 20px;
   font-size: 1rem;
@@ -56,7 +58,7 @@
 }
 
 .navbar-links a:hover {
-  color: #055f32;
+  color: rgb(45, 124, 204);
 }
 
 /* Media Queries for Responsive Navbar */
@@ -81,14 +83,14 @@
     display: block;
     cursor: pointer;
     font-size: 1.5rem;
-    color: #07302c;
+    color: #000;
     background: none;
     border: none;
     padding: 10px;
   }
 
   .navbar-toggle:hover {
-    color: #055f32;
+    color: #000000c7;
   }
 
   .navbar.open .navbar-links {

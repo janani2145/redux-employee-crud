@@ -34,7 +34,7 @@ const List = () => {
   return (
     <>
       <h2>Employee Details</h2>
-      <div>
+      <div className='content-table-container'>
         <table className="content-table">
           <thead>
             <tr>
@@ -42,14 +42,14 @@ const List = () => {
               <th>Full Name</th>
               <th>Email</th>
               <th>Employee ID</th>
-              <th>Date of Birth</th>
+              <th>D.O.B</th>
               <th>Gender</th>
               <th>Phone Number</th>
               <th>Department</th>
               <th>Role</th>
               <th>Address</th>
-              <th>Action</th>
               <th>Zip Code</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
@@ -68,12 +68,13 @@ const List = () => {
                 <td>{todo.zip}</td>
                 <td>
                 < div className="action-column">
+                <Link className="edit-link" to={`/edit/${todo.id}`}>
+                    <FontAwesomeIcon icon={faEdit} />
+                  </Link>
                   <button className="delete-icon" onClick={() => showDialog(todo.id)}>
                     <FontAwesomeIcon icon={faTrash} />
                   </button>
-                  <Link className="edit-link" to={`/edit/${todo.id}`}>
-                    <FontAwesomeIcon icon={faEdit} />
-                  </Link>
+                 
                 </div>
                 </td>
               </tr>

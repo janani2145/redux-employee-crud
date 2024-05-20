@@ -1,39 +1,54 @@
 h2 {
-  color: #07302c;
+  color: #000;
   padding-top: 100px;
   text-align: center;
 }
 
+.content-table-container {
+  width: 90%; /* Adjust the width to be less than 100% to add margins */
+  overflow-x: auto; /* Allow horizontal scrolling */
+  margin: 20px auto; /* Center the container with top and bottom margins */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: add some shadow for better visual separation */
+}
+
 .content-table {
   border-collapse: collapse;
-  width: 90%; /* Adjust width as needed */
-  margin-top: 20px;
-  margin-left: auto; /* Center the table horizontally */
-  margin-right: auto;
+  width: 100%; /* Ensure the table takes full width of the container */
   border-radius: 5px;
-  overflow-x: auto;
+  min-width: 800px;
+  border: 1px solid #00000070; /* Set a minimum width if needed */
 }
 
 .content-table th,
 .content-table td {
-  border: 1px solid #ccc;
   text-align: center;
   padding: 8px;
 }
 
 .content-table th {
-  background-color: whitesmoke;
-  color: #07302c;
+  /* background-color: #87adcf93; */
+  background-color: #c2dcee;
+  color: #000;
 }
+
+.content-table tr:nth-child(even) {
+  background-color: #f2f2f2; /* Light grey background for even rows */
+}
+
+.content-table tr:nth-child(odd) {
+  background-color: #ffffff; /* White background for odd rows */
+}
+
 .active-row {
   background-color: #fff;
 }
+
 .delete-icon {
   color: #fff;
   cursor: pointer;
   font-size: large;
   padding: 0 5px;
-  margin-right: 10px;
   background-color: #cc0000;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -42,8 +57,8 @@ h2 {
 .delete-icon:hover {
   background-color: #ec2222;
   color: #fff;
-
 }
+
 .edit-link {
   color: #fff; /* Desired color for the link */
   font-size: larger;
@@ -51,6 +66,7 @@ h2 {
   padding: 0 5px;
   background-color: #0c5e1e;
   border-radius: 5px;
+  margin-right: 10px;
 }
 
 .edit-link:hover {
@@ -58,16 +74,15 @@ h2 {
   background-color: #137528;
   border-color: transparent;
 }
+
 .action-column {
   display: flex;
   justify-content: center;
   text-align: center;
   margin-bottom: 5px;
- /* Add border */
   border-radius: 5px; /* Add border radius */
 }
 
-/* Dialog styles */
 .dialog-overlay {
   position: fixed;
   top: 0;
@@ -92,7 +107,8 @@ h2 {
   margin-bottom: 20px;
 }
 
-button.wx_remove, button.wx_edit {
+button.wx_remove,
+button.wx_edit {
   color: white;
   border: none;
   border-radius: 5px;
@@ -120,7 +136,7 @@ button.wx_edit:hover {
 
 /* Media Queries for Responsive Design */
 @media (max-width: 1200px) {
-  .content-table {
+  .content-table-container {
     width: 95%;
   }
 
@@ -131,7 +147,7 @@ button.wx_edit:hover {
 }
 
 @media (max-width: 992px) {
-  .content-table {
+  .content-table-container {
     width: 100%;
   }
 
@@ -191,4 +207,3 @@ button.wx_edit:hover {
     padding: 15px;
   }
 }
-
